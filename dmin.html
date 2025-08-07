@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel Admin - TechBarato</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- Botão de Admin -->
+<div class="admin-acesso">
+  <button onclick="mostrarLoginAdmin()">Área Admin</button>
+</div>
+
+<!-- Login Admin -->
+<div id="admin-login" class="admin-login">
+  <p>Digite a senha:</p>
+  <input type="password" id="senha-admin">
+  <button onclick="verificarSenha()">Entrar</button>
+</div>
+
+<!-- Área Admin -->
+<div id="area-admin" class="area-admin">
+  <h2>📊 Relatório de Vendas</h2>
+  <ul>
+    <li>Fone Bluetooth: <span id="admin-fone">0</span> compras</li>
+    <li>Smartwatch: <span id="admin-smart">0</span> compras</li>
+    <li>Lâmpada LED: <span id="admin-lamp">0</span> compras</li>
+  </ul>
+  <button onclick="esconderAdmin()">Sair</button>
+</div>
+
+<body>
+  <header>
+    <h1>Painel de Controle</h1>
+  </header>
+  <main>
+    <section>
+      <h2>Resumo de Compras Simuladas</h2>
+      <ul>
+        <li>Fones: <span id="fone">0</span></li>
+        <li>Smartwatches: <span id="smart">0</span></li>
+        <li>Lâmpadas: <span id="lamp">0</span></li>
+      </ul>
+    </section>
+  </main>
+  <script>
+    const produtos = ['fone', 'smart', 'lamp'];
+    produtos.forEach(prod => {
+      const valor = parseInt(localStorage.getItem(prod)) || 0;
+      document.getElementById(prod).textContent = valor;
+    });
+  </script>
+</body>
+</html>

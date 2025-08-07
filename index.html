@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>TechBarato - Produtos Acessíveis</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+
+
+<body>
+  <header>
+    <h1>TechBarato</h1>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Produtos em Oferta</h2>
+      
+      <div class="categorias">
+        <button class="ativo" onclick="showTab('fones')">Fones</button>
+        <button onclick="showTab('smartwatches')">Smartwatches</button>
+        <button onclick="showTab('lampadas')">Lâmpadas</button>
+      </div>
+
+      <!-- Fones -->
+      <div id="fones" class="tab active produto-box">
+        <img src="https://via.placeholder.com/120x120.png?text=Fone" alt="Fone">
+        <h3>Fone Bluetooth</h3>
+        <p>Preço: R$29</p>
+        <a class="produto-link" href="https://shope.ee/xxxx" target="_blank" onclick="addCompra('fone')">Comprar na Shopee</a>
+        <p class="contador">Compras: <span id="fone">0</span></p>
+        <a class="whatsapp" href="https://wa.me/?text=Olha+esse+fone+barato:+https://shope.ee/xxxx" target="_blank">📤 Compartilhar no WhatsApp</a>
+      </div>
+
+      <!-- Smartwatches -->
+      <div id="smartwatches" class="tab produto-box">
+        <img src="https://via.placeholder.com/120x120.png?text=Smart" alt="Smartwatch">
+        <h3>Smartwatch</h3>
+        <p>Preço: R$89</p>
+        <a class="produto-link" href="https://shope.ee/yyyy" target="_blank" onclick="addCompra('smart')">Comprar na Shopee</a>
+        <p class="contador">Compras: <span id="smart">0</span></p>
+        <a class="whatsapp" href="https://wa.me/?text=Smartwatch+em+promoção:+https://shope.ee/yyyy" target="_blank">📤 Compartilhar no WhatsApp</a>
+      </div>
+
+      <!-- Lâmpadas -->
+      <div id="lampadas" class="tab produto-box">
+        <img src="https://via.placeholder.com/120x120.png?text=Lâmpada" alt="Lâmpada">
+        <h3>Lâmpada LED Inteligente</h3>
+        <p>Preço: R$39</p>
+        <a class="produto-link" href="https://shope.ee/zzzz" target="_blank" onclick="addCompra('lamp')">Comprar na Shopee</a>
+        <p class="contador">Compras: <span id="lamp">0</span></p>
+        <a class="whatsapp" href="https://wa.me/?text=Lâmpada+LED+inteligente:+https://shope.ee/zzzz" target="_blank">📤 Compartilhar no WhatsApp</a>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 TechBarato.com.br - Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
