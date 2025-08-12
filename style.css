@@ -1,200 +1,100 @@
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+ body {
+   font-family: Arial, sans-serif;
+   background-color: #f5f7fa;
+   margin: 0;
+   padding: 0;
+ }
 
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f7f9fb;
-  color: #333;
-  line-height: 1.6;
-}
+ header {
+   background: #0d6efd;
+   color: white;
+   padding: 15px;
+   text-align: center;
+ }
 
-header {
-  background-color: #0077ff;
-  color: white;
-  padding: 30px 20px;
-  text-align: center;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-}
+ h1 {
+   margin: 0;
+ }
 
-header h1 {
-  font-size: 2.8rem;
-}
+ .produtos {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   gap: 20px;
+   padding: 20px;
+ }
 
-nav {
-  margin-top: 15px;
-}
+ .produto {
+   background: white;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   padding: 15px;
+   text-align: center;
+   transition: transform 0.2s;
+ }
 
-nav a {
-  color: white;
-  margin: 0 20px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1em;
-  transition: color 0.2s;
-}
+ .produto:hover {
+   transform: scale(1.03);
+ }
 
-nav a:hover {
-  color: #ffd700;
-}
+ .produto img {
+   max-width: 100%;
+   border-radius: 8px;
+ }
 
-main {
-  padding: 40px 20px;
-}
+ .produto h3 {
+   font-size: 18px;
+   margin: 10px 0;
+ }
 
-section {
-  background: white;
-  padding: 25px;
-  margin-bottom: 30px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-}
+ .produto p {
+   font-size: 14px;
+   color: #555;
+ }
 
-section h2 {
-  color: #0077ff;
-  margin-bottom: 20px;
-  text-align: center;
-}
+ .produto strong {
+   font-size: 16px;
+   color: #0077cc;
+ }
 
-/* Abas de categorias */
-.categorias {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 25px;
-}
+ .produto a button {
+   background-color: #ff6600;
+   color: white;
+   padding: 10px 15px;
+   border: none;
+   border-radius: 6px;
+   cursor: pointer;
+   font-size: 16px;
+   margin-top: 10px;
+ }
 
-.categorias button {
-  background-color: #e0e0e0;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-weight: bold;
-  color: #333;
-  transition: background-color 0.3s;
-}
+ .produto a button:hover {
+   background-color: #e65c00;
+ }
 
-.categorias button.ativo {
-  background-color: #0077ff;
-  color: white;
-}
+ /* ======== SEÇÃO SOBRE ======== */
+ #sobre {
+   padding: 20px;
+   background: #eaf4f8;
+   color:  #0d6efd;
+   text-align: center;
+ }
 
-.categorias button:hover {
-  background-color: #ccc;
-}
+ /* ======== RODAPÉ ======== */
+ footer {
+   background: #0d6efd;
+   color: white;
+   text-align: center;
+   padding: 10px;
+ }
 
-/* Produtos */
-.produto-box {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  text-align: center;
-  margin-bottom: 20px;
-}
+ /* ======== RESPONSIVIDADE ======== */
+ @media (max-width: 600px) {
+   nav ul li {
+     display: block;
+     margin: 5px 0;
+   }
 
-.produto-box img {
-  width: 120px;
-  margin-bottom: 15px;
-}
-
-.produto-box h3 {
-  color: #111;
-  margin-bottom: 10px;
-}
-
-.produto-box p {
-  font-size: 1rem;
-  margin-bottom: 10px;
-}
-
-a.produto-link {
-  display: inline-block;
-  background-color: #28a745;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 10px;
-  transition: background-color 0.2s;
-}
-
-a.produto-link:hover {
-  background-color: #218838;
-}
-
-/* Contador de compras */
-.contador {
-  margin-top: 10px;
-  font-size: 0.95em;
-  color: #333;
-  font-weight: bold;
-}
-
-a.whatsapp {
-  display: block;
-  margin-top: 10px;
-  color: #0077ff;
-  text-decoration: none;
-  font-size: 0.9em;
-}
-a.whatsapp:hover {
-  text-decoration: underline;
-}
-
-/* Rodapé */
-footer {
-  background-color: #0077ff;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 30px;
-  font-size: 14px;
-}
-
-.admin-login, .area-admin {
-  display: none;
-  background-color: #f9f9f9;
-  border: 2px solid #555;
-  padding: 20px;
-  margin: 20px;
-  border-radius: 10px;
-  max-width: 400px;
-}
-
-.admin-login input {
-  padding: 5px;
-  margin-right: 10px;
-}
-
-.area-admin h2 {
-  color: #2c3e50;
-}
-
-.area-admin ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.area-admin li {
-  padding: 8px 0;
-  font-weight: bold;
-}
-
-.admin-acesso {
-  text-align: center;
-  margin-top: 40px;
-}
-
-.admin-acesso button {
-  background-color: #333;
-  color: #fff;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
+   .produto {
+     width: 90%;
+   }
+ }

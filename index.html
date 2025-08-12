@@ -1,67 +1,125 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
-  <title>TechBarato - Produtos Acessíveis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechSimple - Loja de Afiliados</title>
   <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
 </head>
 
-
 <body>
+
   <header>
-    <h1>TechBarato</h1>
-    <nav>
-      <a href="#">Início</a>
-      <a href="#">Contato</a>
-    </nav>
+    <h1>TechSimple - Ofertas Imperdíveis</h1>
+    <p>Compre com segurança nas melhores lojas online</p>
   </header>
 
-  <main>
-    <section>
-      <h2>Produtos em Oferta</h2>
-      
-      <div class="categorias">
-        <button class="ativo" onclick="showTab('fones')">Fones</button>
-        <button onclick="showTab('smartwatches')">Smartwatches</button>
-        <button onclick="showTab('lampadas')">Lâmpadas</button>
-      </div>
+  <section class="produtos">
+    <!-- PRODUTO 1 -->
+    <div class="produto">
+      <img src="https://m.media-amazon.com/images/I/81eWob9jZfL._AC_SL1500_.jpg" alt="Fone Bluetooth">
+      <h3>Fone de Ouvido Bluetooth</h3>
+      <p>Som de alta qualidade, bateria de até 24h e microfone embutido.</p>
+      <strong>R$ 199,90</strong>
+      <br>
+      <a href="https://www.amazon.com.br/dp/B09XYZ123?tag=SEU_CODIGO" target="_blank">
+        <button>Comprar Agora</button>
+      </a>
+    </div>
 
-      <!-- Fones -->
-      <div id="fones" class="tab active produto-box">
-        <img src="https://via.placeholder.com/120x120.png?text=Fone" alt="Fone">
-        <h3>Fone Bluetooth</h3>
-        <p>Preço: R$29</p>
-        <a class="produto-link" href="https://shope.ee/xxxx" target="_blank" onclick="addCompra('fone')">Comprar na Shopee</a>
-        <p class="contador">Compras: <span id="fone">0</span></p>
-        <a class="whatsapp" href="https://wa.me/?text=Olha+esse+fone+barato:+https://shope.ee/xxxx" target="_blank">📤 Compartilhar no WhatsApp</a>
-      </div>
+    <!-- PRODUTO 2 -->
+    <div class="produto">
+      <img src="https://m.media-amazon.com/images/I/61K5+z3DlmL._AC_SL1500_.jpg" alt="Teclado Mecânico">
+      <h3>Teclado Mecânico Gamer</h3>
+      <p>Switches azuis, iluminação RGB e design ergonômico.</p>
+      <strong>R$ 299,90</strong>
+      <br>
+      <a href="https://www.amazon.com.br/dp/B08XYZ456?tag=SEU_CODIGO" target="_blank">
+        <button>Comprar Agora</button>
+      </a>
+    </div>
+    <!-- PRODUTO 3 -->
+    <div class="produto">
+      <img src="https://m.media-amazon.com/images/I/81eWob9jZfL._AC_SL1500_.jpg" alt="Fone Bluetooth">
+      <h3>Fone de Ouvido Bluetooth</h3>
+      <p>Som de alta qualidade, bateria de até 24h e microfone embutido.</p>
+      <strong>R$ 199,90</strong>
+      <br>
+      <a href="https://www.amazon.com.br/dp/B09XYZ123?tag=SEU_CODIGO" target="_blank">
+        <button>Comprar Agora</button>
+      </a>
+    </div>
 
-      <!-- Smartwatches -->
-      <div id="smartwatches" class="tab produto-box">
-        <img src="https://via.placeholder.com/120x120.png?text=Smart" alt="Smartwatch">
-        <h3>Smartwatch</h3>
-        <p>Preço: R$89</p>
-        <a class="produto-link" href="https://shope.ee/yyyy" target="_blank" onclick="addCompra('smart')">Comprar na Shopee</a>
-        <p class="contador">Compras: <span id="smart">0</span></p>
-        <a class="whatsapp" href="https://wa.me/?text=Smartwatch+em+promoção:+https://shope.ee/yyyy" target="_blank">📤 Compartilhar no WhatsApp</a>
-      </div>
+    <!-- PRODUTO 4 -->
+    <div class="produto">
+      <img src="https://m.media-amazon.com/images/I/61K5+z3DlmL._AC_SL1500_.jpg" alt="Teclado Mecânico">
+      <h3>Teclado Mecânico Gamer</h3>
+      <p>Switches azuis, iluminação RGB e design ergonômico.</p>
+      <strong>R$ 299,90</strong>
+      <br>
+      <a href="https://www.amazon.com.br/dp/B08XYZ456?tag=SEU_CODIGO" target="_blank">
+        <button>Comprar Agora</button>
+      </a>
+    </div>
+    <!-- PRODUTO 5 -->
+    <div class="produto">
+      <img src="https://m.media-amazon.com/images/I/81eWob9jZfL._AC_SL1500_.jpg" alt="Fone Bluetooth">
+      <h3>Fone de Ouvido Bluetooth</h3>
+      <p>Som de alta qualidade, bateria de até 24h e microfone embutido.</p>
+      <strong>R$ 199,90</strong>
+      <br>
+      <a href="https://www.amazon.com.br/dp/B09XYZ123?tag=SEU_CODIGO" target="_blank">
+        <button>Comprar Agora</button>
+      </a>
+    </div>
 
-      <!-- Lâmpadas -->
-      <div id="lampadas" class="tab produto-box">
-        <img src="https://via.placeholder.com/120x120.png?text=Lâmpada" alt="Lâmpada">
-        <h3>Lâmpada LED Inteligente</h3>
-        <p>Preço: R$39</p>
-        <a class="produto-link" href="https://shope.ee/zzzz" target="_blank" onclick="addCompra('lamp')">Comprar na Shopee</a>
-        <p class="contador">Compras: <span id="lamp">0</span></p>
-        <a class="whatsapp" href="https://wa.me/?text=Lâmpada+LED+inteligente:+https://shope.ee/zzzz" target="_blank">📤 Compartilhar no WhatsApp</a>
-      </div>
+    <!-- PRODUTO 6 -->
+    <div class="produto">
+      <img src="https://m.media-amazon.com/images/I/61K5+z3DlmL._AC_SL1500_.jpg" alt="Teclado Mecânico">
+      <h3>Teclado Mecânico Gamer</h3>
+      <p>Switches azuis, iluminação RGB e design ergonômico.</p>
+      <strong>R$ 299,90</strong>
+      <br>
+      <a href="https://www.amazon.com.br/dp/B08XYZ456?tag=SEU_CODIGO" target="_blank">
+        <button>Comprar Agora</button>
+      </a>
+    </div>
+    <!-- PRODUTO 7 -->
+    <div class="produto">
+      <img src="https://m.media-amazon.com/images/I/81eWob9jZfL._AC_SL1500_.jpg" alt="Fone Bluetooth">
+      <h3>Fone de Ouvido Bluetooth</h3>
+      <p>Som de alta qualidade, bateria de até 24h e microfone embutido.</p>
+      <strong>R$ 199,90</strong>
+      <br>
+      <a href="https://www.amazon.com.br/dp/B09XYZ123?tag=SEU_CODIGO" target="_blank">
+        <button>Comprar Agora</button>
+      </a>
+    </div>
 
-    </section>
-  </main>
+    <!-- PRODUTO 8 -->
+    <div class="produto">
+      <img src="https://m.media-amazon.com/images/I/61K5+z3DlmL._AC_SL1500_.jpg" alt="Teclado Mecânico">
+      <h3>Teclado Mecânico Gamer</h3>
+      <p>Switches azuis, iluminação RGB e design ergonômico.</p>
+      <strong>R$ 299,90</strong>
+      <br>
+      <a href="https://www.amazon.com.br/dp/B08XYZ456?tag=SEU_CODIGO" target="_blank">
+        <button>Comprar Agora</button>
+      </a>
+    </div>
+  </section>
+  <section id="sobre">
+    <h2>Sobre a TechSimple</h2>
+    <p>Nossa missão é levar tecnologia de forma simples e acessível a todos, sem complicação e com preços justos.</p>
+  </section>
 
   <footer>
-    <p>&copy; 2025 TechBarato.com.br - Todos os direitos reservados.</p>
+    <p>© 2025 TechSimple </p>
   </footer>
+
+  <script src="script.js"></script>
+
 </body>
+
 </html>
